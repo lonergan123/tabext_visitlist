@@ -49,10 +49,8 @@
                         {data: "DISP_GROUP"},
                         {data: "DIAGNOSIS_DESCRIPTION"},
                         {
-                            data: "READMIT_DAYS",
-                            render: function (data, type, row, meta) {
-                                return '<a href="' + data + '">Download</a>';
-                            }
+                            data: "READMIT_DAYS"
+
                         }
                     ],
                     order: [[2, "desc"]],
