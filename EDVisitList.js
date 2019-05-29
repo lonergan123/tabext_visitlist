@@ -48,7 +48,12 @@
                         {data: "CTAS"},
                         {data: "DISP_GROUP"},
                         {data: "DIAGNOSIS_DESCRIPTION"},
-                        {data: "READMIT_DAYS"}
+                        {
+                            data: "READMIT_DAYS",
+                            render: function (data, type, row, meta) {
+                                return '<a href="' + data + '">Download</a>';
+                            }
+                        }
                     ],
                     order: [[2, "desc"]],
                     pageLength: 15,
