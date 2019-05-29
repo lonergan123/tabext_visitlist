@@ -52,7 +52,7 @@
                             data: "READMIT_DAYS",
                             render: function (data, type, row, meta) {
                                 if (data != 'Null') {
-                                    return '<img src="alert.png" alt="Alert" height="16" width="16">';
+                                    return '<img src="alert.png" alt="Alert" height="16" width="16"> <img src="readmit.png" alt="Alert" height="16" width="16">';
                                 } else {
                                     return '';
                                 }
