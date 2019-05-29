@@ -5,6 +5,8 @@
     $(document).ready(function() {
         tableau.extensions.initializeAsync().then(function () {
             const worksheet = tableau.extensions.dashboardContent.dashboard.worksheets.find(w => w.name === "Sheet 1");
+
+            //Add event listener to refresh table when parameters changed
             worksheet.getParametersAsync().then(function (parameters) {
                 parameters.forEach(function (p) {
                     p.addEventListener(tableau.TableauEventType.ParameterChanged, onParameterChange);
@@ -13,7 +15,11 @@
 
             function onParameterChange (parameterChangeEvent) {
                 console.log('paramater change');
-                table.clear();
+                refreshData(worksheet).then(function(finaldata){
+                    table.clear();
+                    table.rows.add(finaldata);
+                    table.draw();
+                });
             }
 
             function refreshData(w) {
