@@ -71,6 +71,7 @@
                                 .then(function(finaldata){
                                     table.clear();
                                     table.rows.add(finaldata);
+                                    table.draw();
                                 }))
                             }
                         },
