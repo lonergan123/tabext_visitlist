@@ -50,10 +50,7 @@
                         {data: "DIAGNOSIS_DESCRIPTION"},
                         {
                             orderable: false,
-                            render: function (data, type, row, meta) {
-                                var imgsrc = 'alert.png';
-                                return '<img src="alert.png" alt="Alert" height="16" width="16">;
-                            },
+                            render: '<img src="alert.png" alt="Alert" height="16" width="16">'
                             defaultContent: ""
                         }
                     ],
