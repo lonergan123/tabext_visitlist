@@ -47,11 +47,7 @@
                         {data: "PHYSICIAN_ASSESSMENT_DT"},
                         {data: "CTAS"},
                         {data: "DISP_GROUP"},
-                        {data: "DIAGNOSIS_DESCRIPTION"},
-                        {
-                            data: "READMIT_DAYS",
-                            render: '<img src="alert.png" alt="Alert" height="16" width="16">'
-                        }
+                        {data: "DIAGNOSIS_DESCRIPTION"}
                     ],
                     order: [[2, "desc"]],
                     pageLength: 15,
