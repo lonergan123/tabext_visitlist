@@ -47,7 +47,13 @@
                         {data: "PHYSICIAN_ASSESSMENT_DT"},
                         {data: "CTAS"},
                         {data: "DISP_GROUP"},
-                        {data: "DIAGNOSIS_DESCRIPTION"}
+                        {data: "DIAGNOSIS_DESCRIPTION"},
+                        {
+                            data: "READMIT_DAYS",
+                            render: function (data, type, row, meta) {
+                                return '<a href="' + data + '">Download</a>';
+                            }
+                        }
                     ],
                     order: [[2, "desc"]],
                     pageLength: 15,
