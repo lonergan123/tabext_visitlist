@@ -49,7 +49,7 @@
                         {data: "DISP_GROUP"},
                         {data: "DIAGNOSIS_DESCRIPTION"},
                         {
-                            orderable: false,
+                            data: "READMIT_DAYS",
                             render: '<img src="alert.png" alt="Alert" height="16" width="16">'
                         }
                     ],
