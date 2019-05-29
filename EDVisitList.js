@@ -50,8 +50,7 @@
                         {data: "DIAGNOSIS_DESCRIPTION"},
                         {
                             orderable: false,
-                            render: "<img src='alert.png' alt='Alert' height='16' width='16'>",
-                            defaultContent: ""
+                            render: '<img src="alert.png" alt="Alert" height="16" width="16">'
                         }
                     ],
                     order: [[2, "desc"]],
