@@ -13,6 +13,7 @@
 
             function onParameterChange (parameterChangeEvent) {
                 console.log('paramater change');
+                table.clear();
             }
 
             function refreshData(w) {
