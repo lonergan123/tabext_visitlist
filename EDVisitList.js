@@ -19,6 +19,7 @@
                     table.clear();
                     table.rows.add(finaldata);
                     table.draw();
+                    console.log('test1123')
                 });
             }
 
