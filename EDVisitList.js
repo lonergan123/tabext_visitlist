@@ -107,7 +107,7 @@
                     function readmit_cells() {
                         if (d.READMIT_DAYS != 'Null') {
                             return '<td>Readmit Details:</td>' +
-                                '<img src="readmit.png" alt="Alert" height="16" width="16"><td>'+d.READMIT_DAYS+' days after discharge.</td>' +
+                                '<td><img src="readmit.png" alt="Alert" height="16" width="16">'+d.READMIT_DAYS+' days after discharge.</td>' +
                                 '</tr>';
                         } else {
                             return '';
