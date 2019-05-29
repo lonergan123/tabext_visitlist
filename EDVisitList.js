@@ -5,6 +5,7 @@
     $(document).ready(function() {
         tableau.extensions.initializeAsync().then(function () {
             const worksheet = tableau.extensions.dashboardContent.dashboard.worksheets.find(w => w.name === "Sheet 1");
+            console.log(worksheet.getParametersAsync());
             function refreshData(w) {
                 let data = w.getUnderlyingDataAsync({includeAllColumns: true}).then(function (underlying) {
                     let columns = underlying.columns;
