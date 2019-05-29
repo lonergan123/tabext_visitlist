@@ -12,11 +12,9 @@
             });
 
             function onParameterChange (parameterChangeEvent) {
-                table.clear();
                 console.log('paramater change');
             }
 
-            console.log(worksheet.getParametersAsync());
             function refreshData(w) {
                 let data = w.getUnderlyingDataAsync({includeAllColumns: true}).then(function (underlying) {
                     let columns = underlying.columns;
