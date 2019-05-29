@@ -94,7 +94,7 @@
                             }
                         },
                         {
-                            text: 'More buttons to come...',
+                            text: 'More buttons can be added ...',
                             action: function (e, dt, node, config) {
                                 alert("Not yet active.");
                             }
@@ -106,8 +106,8 @@
                     // return some details only for patient's that qualify
                     function readmit_cells() {
                         if (d.READMIT_DAYS != 'Null') {
-                            return '<td>Readmission Info:</td>' +
-                                '<td>'+d.READMIT_DAYS+' days after discharge.</td>' +
+                            return '<td>Readmit Details:</td>' +
+                                '<img src="readmit.png" alt="Alert" height="16" width="16"><td>'+d.READMIT_DAYS+' days after discharge.</td>' +
                                 '</tr>';
                         } else {
                             return '';
