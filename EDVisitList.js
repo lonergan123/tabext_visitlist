@@ -6,22 +6,6 @@
         tableau.extensions.initializeAsync().then(function () {
             const worksheet = tableau.extensions.dashboardContent.dashboard.worksheets.find(w => w.name === "Sheet 1");
 
-            //Add event listener to refresh table when parameters changed
-            worksheet.getParametersAsync().then(function (parameters) {
-                parameters.forEach(function (p) {
-                    p.addEventListener(tableau.TableauEventType.ParameterChanged, onParameterChange);
-                });
-            });
-
-            function onParameterChange (parameterChangeEvent) {
-                console.log('paramater change');
-                refreshData(worksheet).then(function(finaldata){
-                    table.clear();
-                    table.rows.add(finaldata);
-                    table.draw();
-                    console.log('test1123')
-                });
-            }
 
             function refreshData(w) {
                 let data = w.getUnderlyingDataAsync({includeAllColumns: true}).then(function (underlying) {
@@ -48,6 +32,24 @@
             }
 
             refreshData(worksheet).then(function(finaldata){
+
+                //Add event listener to refresh table when parameters changed
+                worksheet.getParametersAsync().then(function (parameters) {
+                    parameters.forEach(function (p) {
+                        p.addEventListener(tableau.TableauEventType.ParameterChanged, onParameterChange);
+                    });
+                });
+
+                function onParameterChange (parameterChangeEvent) {
+                    console.log('paramater change');
+                    refreshData(worksheet).then(function(finaldata){
+                        table.clear();
+                        table.rows.add(finaldata);
+                        table.draw();
+                        console.log('test1123')
+                    });
+                }
+
                 const table = $('#datatable').DataTable({
                     dom: 'Bfrtip', //shows where to display each element on page
                     data: finaldata,
