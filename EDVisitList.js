@@ -5,6 +5,17 @@
     $(document).ready(function() {
         tableau.extensions.initializeAsync().then(function () {
             const worksheet = tableau.extensions.dashboardContent.dashboard.worksheets.find(w => w.name === "Sheet 1");
+            workbook.getParametersAsync().then(function (parameters) {
+                parameters.forEach(function (p) {
+                    p.addEventListener(tableau.TableauEventType.ParameterChanged, onParameterChange);
+                    parameterRow(p).appendTo(tableBody);
+                });
+            });
+
+            function onParameterChange (parameterChangeEvent) {
+                table.clear();
+            }
+
             console.log(worksheet.getParametersAsync());
             function refreshData(w) {
                 let data = w.getUnderlyingDataAsync({includeAllColumns: true}).then(function (underlying) {
