@@ -50,10 +50,9 @@
                         {data: "DIAGNOSIS_DESCRIPTION"},
                         {
                             orderable: false,
-                            data: null,
                             render: function (data, type, row, meta) {
                                 var imgsrc = 'alert.png';
-                                return '<img class="img-responsive" src="' + imgsrc +'" alt="tbl_StaffImage" height="100px" width="100px">';
+                                return '<img src="alert.png" alt="Alert" height="16" width="16">;
                             },
                             defaultContent: ""
                         }
