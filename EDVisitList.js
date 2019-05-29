@@ -47,7 +47,16 @@
                         {data: "PHYSICIAN_ASSESSMENT_DT"},
                         {data: "CTAS"},
                         {data: "DISP_GROUP"},
-                        {data: "DIAGNOSIS_DESCRIPTION"}
+                        {data: "DIAGNOSIS_DESCRIPTION"},
+                        {
+                            orderable: false,
+                            data: null,
+                            render: function (data, type, row, meta) {
+                                var imgsrc = 'alert.png';
+                                return '<img class="img-responsive" src="' + imgsrc +'" alt="tbl_StaffImage" height="100px" width="100px">';
+                            },
+                            defaultContent: ""
+                        }
                     ],
                     order: [[2, "desc"]],
                     pageLength: 15,
