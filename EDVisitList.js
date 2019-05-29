@@ -51,7 +51,7 @@
                         {
                             data: "READMIT_DAYS",
                             render: function (data, type, row, meta) {
-                                return '<a href="' + data + '">Download</a>';
+                                return '<img src="alert.png" alt="Alert" height="16" width="16">';
                             }
                         }
                     ],
