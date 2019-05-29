@@ -8,12 +8,12 @@
             workbook.getParametersAsync().then(function (parameters) {
                 parameters.forEach(function (p) {
                     p.addEventListener(tableau.TableauEventType.ParameterChanged, onParameterChange);
-                    parameterRow(p).appendTo(tableBody);
                 });
             });
 
             function onParameterChange (parameterChangeEvent) {
                 table.clear();
+                console.log('paramater change');
             }
 
             console.log(worksheet.getParametersAsync());
