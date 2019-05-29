@@ -48,10 +48,7 @@
                         {data: "CTAS"},
                         {data: "DISP_GROUP"},
                         {data: "DIAGNOSIS_DESCRIPTION"},
-                        {
-                            data: "READMIT_DAYS"
-
-                        }
+                        {data: "READMIT_DAYS"}
                     ],
                     order: [[2, "desc"]],
                     pageLength: 15,
