@@ -42,6 +42,7 @@
                         },
                         {
                             data: "PTN_CHART",
+                            orderable: false,
                             width: "75px"
                         },
                         {data: "PHYSICIAN_ASSESSMENT_DT"},
@@ -70,7 +71,6 @@
                                 .then(function(finaldata){
                                     table.clear();
                                     table.rows.add(finaldata);
-                                    table.order([3, 'asc']).draw()
                                 }))
                             }
                         },
