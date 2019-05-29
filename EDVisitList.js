@@ -50,7 +50,11 @@
                         {
                             data: "READMIT_DAYS",
                             render: function (data, type, row, meta) {
-                                return '<img src="alert.png" alt="Alert" height="16" width="16">';
+                                if (data != 'Null') {
+                                    return '<img src="alert.png" alt="Alert" height="16" width="16">';
+                                } else {
+                                    return '';
+                                }
                             }
                         },
                         {data: "DIAGNOSIS_DESCRIPTION"}
