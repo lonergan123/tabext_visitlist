@@ -1,11 +1,10 @@
 'use strict';
-//This was really helpful: https://github.com/tableaumagic/tableau-datatables-extension/blob/master/public/js/index.js
+// This was really helpful: https://github.com/tableaumagic/tableau-datatables-extension/blob/master/public/js/index.js
 // Wrap everything in an anonymous function to avoid polluting the global namespace
 (function () {
     $(document).ready(function() {
         tableau.extensions.initializeAsync().then(function () {
-            const worksheet = tableau.extensions.dashboardContent.dashboard.worksheets.find(w => w.name === "Sheet 1");
-
+            const worksheet = tableau.extensions.dashboardContent.dashboard.worksheets.find(w => w.name === "Visit List");
 
             function refreshData(w) {
                 let data = w.getUnderlyingDataAsync({includeAllColumns: true}).then(function (underlying) {
@@ -41,12 +40,10 @@
                 });
 
                 function onParameterChange (parameterChangeEvent) {
-                    console.log('paramater change');
                     refreshData(worksheet).then(function(finaldata){
                         table.clear();
                         table.rows.add(finaldata);
                         table.draw();
-                        console.log('test1123')
                     });
                 }
 
