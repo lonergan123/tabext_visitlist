@@ -152,7 +152,7 @@
                                 '</table>' +
                         '</div>' +
                         '<div class="col-md-4">' +
-                            '<h3>Warnings</h3>' +
+                            '<h6>Warnings</h6>' +
                         '</div>' +
                     '</div>'
                 };
