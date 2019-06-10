@@ -152,10 +152,7 @@
                                 '</table>' +
                         '</div> ' +
                     '<div class="col-md-4">' +
-                    'One of three columns ' +
-                    '</div>' +
-                    '<div class="col-md-4">' +
-                    'One of three columns' +
+                        '<h3>Warnings</h3>' +
                     '</div>' +
                     '</div>' +
                     '</div>'
