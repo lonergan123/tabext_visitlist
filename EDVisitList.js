@@ -148,11 +148,13 @@
                                 '<td>Abstracted ICD10 Diagnosis:</td>' +
                                 '<td>' + d.DXCODE1_NV + ' (' + d.DX_DESC + ')</td>' +
                                 '</tr>' +
-                                readmit_cells() +
                                 '</table>' +
                         '</div>' +
-                        '<div class="col-md-4">' +
-                            '<h6>Warnings</h6>' +
+                        '<div class="col-md-6">' +
+                            '<h6>Alerts</h6>' +
+                                '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +
+                                readmit_cells() +
+                                '</table>' +
                         '</div>' +
                     '</div>'
                 };
