@@ -137,7 +137,7 @@
                         '<td>Presenting Complaint:</td>' +
                         '<td>' + d.PRESENTING_COMPLAINT + '</td>' +
                         '</tr>' +
-                    '</table>'
+                    '</table>';
                 };
 
                 // Add event listener for opening and closing details
