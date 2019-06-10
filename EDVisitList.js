@@ -133,7 +133,7 @@
 
                     return '<div class="container-fluid">' +
                     '<div class="row justify-content-start">' +
-                        '<div class="col-md-4">' +
+                        '<div class="col-md-8">' +
                             '<h6>Visit Details</h6>' +
                                 '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +
                                 '<tr>' +
