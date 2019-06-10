@@ -133,7 +133,7 @@
 
                     return '<div class="container-fluid">' +
                     '<div class="row justify-content-start">' +
-                        '<div class="col-md-8">' +
+                        '<div class="col-md-5">' +
                             '<h6>Visit Details</h6>' +
                                 '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +
                                 '<tr>' +
@@ -150,7 +150,7 @@
                                 '</tr>' +
                                 '</table>' +
                         '</div>' +
-                        '<div class="col-md-6">' +
+                        '<div class="col-md-5">' +
                             '<h6>Alerts</h6>' +
                                 '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +
                                 readmit_cells() +
