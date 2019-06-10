@@ -132,7 +132,7 @@
                     }
 
                     return '<div class="container">' +
-                    '<div class="row justify-content-start"">' +
+                    '<div class="row justify-content-start">' +
                         '<div class="col-md-4">' +
                             '<h3>Visit Details</h3>' +
                                 '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +
