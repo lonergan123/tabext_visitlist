@@ -133,17 +133,10 @@
 
                     return
                     '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +
-                    '<div class="container">' +
-                      '<div class="row">' +
-                        '<div class="col-sm">' +
-                          d.PRESENTING_COMPLAINT +
-                        '</div>' +
-                        '<div class="col-sm">' +
-                        '</div>' +
-                        '<div class="col-sm">' +
-                        '</div>' +
-                      '</div>' +
-                    '</div>' +
+                        '<tr>' +
+                        '<td>Presenting Complaint:</td>' +
+                        '<td>' + d.PRESENTING_COMPLAINT + '</td>' +
+                        '</tr>' +
                     '</table>'
                 };
 
