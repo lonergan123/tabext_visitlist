@@ -133,7 +133,7 @@
 
                     return '<div class="container">' +
                     '<div class="row">' +
-                        '<div class="col-md-4">' +
+                        '<div class="col-md-4 align-self-start">' +
                             '<h3>Visit Details</h3>' +
                                 '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +
                                 '<tr>' +
@@ -150,11 +150,10 @@
                                 '</tr>' +
                                 readmit_cells() +
                                 '</table>' +
-                        '</div> ' +
-                    '<div class="col-md-4">' +
-                        '<h3>Warnings</h3>' +
-                    '</div>' +
-                    '</div>' +
+                        '</div>' +
+                        '<div class="col-md-4">' +
+                            '<h3>Warnings</h3>' +
+                        '</div>' +
                     '</div>'
                 };
 
