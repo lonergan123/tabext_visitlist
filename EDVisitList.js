@@ -131,7 +131,7 @@
                         }
                     }
 
-                    return '<div class="container">' +
+                    return '<div class="container-fluid">' +
                     '<div class="row justify-content-start">' +
                         '<div class="col-md-4">' +
                             '<h3>Visit Details</h3>' +
