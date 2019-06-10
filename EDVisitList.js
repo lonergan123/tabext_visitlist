@@ -132,12 +132,21 @@
                     }
 
                     return
-                    '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +
+                        '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +
                         '<tr>' +
                         '<td>Presenting Complaint:</td>' +
                         '<td>' + d.PRESENTING_COMPLAINT + '</td>' +
                         '</tr>' +
-                    '</table>';
+                        '<tr>' +
+                        '<td>Arrival Mode:</td>' +
+                        '<td>' + d.ARRIVAL_MODE + '</td>' +
+                        '</tr>' +
+                        '<tr>' +
+                        '<td>Abstracted ICD10 Diagnosis:</td>' +
+                        '<td>' + d.DXCODE1_NV + ' (' + d.DX_DESC + ')</td>' +
+                        '</tr>' +
+                        readmit_cells() +
+                        '</table>';
                 };
 
                 // Add event listener for opening and closing details
