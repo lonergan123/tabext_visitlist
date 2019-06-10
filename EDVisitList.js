@@ -133,13 +133,28 @@
 
                     return '<div class="container">' +
                     '<div class="row">' +
-                    '<div class="col-sm">' +
-                        d.PRESENTING_COMPLAINT +
-                    '</div> ' +
-                    '<div class="col-sm">' +
+                        '<div class="col-md-4">' +
+                            '<h3>Visit Details</h3>' +
+                                '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +
+                                '<tr>' +
+                                '<td>Presenting Complaint:</td>' +
+                                '<td>' + d.PRESENTING_COMPLAINT + '</td>' +
+                                '</tr>' +
+                                '<tr>' +
+                                '<td>Arrival Mode:</td>' +
+                                '<td>' + d.ARRIVAL_MODE + '</td>' +
+                                '</tr>' +
+                                '<tr>' +
+                                '<td>Abstracted ICD10 Diagnosis:</td>' +
+                                '<td>' + d.DXCODE1_NV + ' (' + d.DX_DESC + ')</td>' +
+                                '</tr>' +
+                                readmit_cells() +
+                                '</table>' +
+                        '</div> ' +
+                    '<div class="col-md-4">' +
                     'One of three columns ' +
                     '</div>' +
-                    '<div class="col-sm">' +
+                    '<div class="col-md-4">' +
                     'One of three columns' +
                     '</div>' +
                     '</div>' +
