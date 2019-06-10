@@ -132,6 +132,7 @@
                     }
 
                     return
+                    '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +
                     '<div class="container">' +
                       '<div class="row">' +
                         '<div class="col-sm">' +
@@ -142,7 +143,8 @@
                         '<div class="col-sm">' +
                         '</div>' +
                       '</div>' +
-                    '</div>'
+                    '</div>' +
+                    '</table>'
                 };
 
                 // Add event listener for opening and closing details
