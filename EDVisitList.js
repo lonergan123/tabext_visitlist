@@ -71,11 +71,16 @@
                         {
                             render: function (data, type, row, meta) {
                                 console.log(row);
-                                if (data != 'Null') {
-                                    return '<img src="alert.png" alt="Alert" height="16" width="16"> <img src="readmit.png" alt="Alert" height="16" width="16">';
-                                } else {
-                                    return '';
+                                var icon_html = '';
+                                if (READMIT_VISIT == 'True') {
+                                    icon_html = icon_html + '<img src="readmit.png" alt="Alert" height="16" width="16">';
+                                } else if (CT_MTBI_ALERT == 'True' || CT_PE_ALERT == 'True') {
+                                    icon_html = icon_html + '<img src="ct.png" alt="Alert" height="16" width="16">';
                                 }
+                                else if (PIA_TO_DISCHARGE_ALERT == 'True' || PIA_TO_CONSULT_ALERT == 'True') {
+                                    icon_html = icon_html + '<img src="timewarning.png" alt="Alert" height="16" width="16">';
+                                }
+                                return icon_html;
                             }
                         },
                         {data: "DIAGNOSIS_DESCRIPTION"}
