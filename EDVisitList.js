@@ -73,10 +73,11 @@
                                 var icon_html = '';
                                 if (row.READMIT_VISIT == 'True') {
                                     icon_html = icon_html + '<img src="readmit.png" alt="Alert" height="16" width="16">';
-                                } else if (row.CT_MTBI_ALERT == 'True' || row.CT_PE_ALERT == 'True') {
+                                }
+                                if (row.CT_MTBI_ALERT == 'True' || row.CT_PE_ALERT == 'True') {
                                     icon_html = icon_html + '<img src="ct.png" alt="CT" height="16" width="16">';
                                 }
-                                else if (row.PIA_TO_DISCHARGE_ALERT == 'True' || row.PIA_TO_CONSULT_ALERT == 'True') {
+                                if (row.PIA_TO_DISCHARGE_ALERT == 'True' || row.PIA_TO_CONSULT_ALERT == 'True') {
                                     icon_html = icon_html + '<img src="timewarning.png" alt="PIA_90P" height="16" width="16">';
                                 }
                                 return icon_html;
@@ -128,14 +129,24 @@
                 function format(d) {
                     // `d` is the original data object for the row
                     // return some details only for patient's that qualify
-                    function readmit_cells() {
-                        if (d.READMIT_DAYS != 'Null') {
-                            return '<td><img src="readmit.png" alt="Alert" height="16" width="16">Readmit Details:</td>' +
+                    function alert_cells() {
+                        var alert_cells_html = '';
+                        if (d.READMIT_VISIT == 'True') {
+                            alert_cells_html = alert_cells_html +
+                                '<tr>' +
+                                '<td><img src="readmit.png" alt="Alert" height="16" width="16">Readmit Details:</td>' +
                                 '<td>'+d.READMIT_DAYS+' days after discharge.</td>' +
                                 '</tr>';
-                        } else {
-                            return '';
-                        }
+                                }
+                        if (d.CT_MTBI_ALERT == 'True' || d.CT_PE_ALERT == 'True') {
+                                alert_cells_html = alert_cells_html +
+                                '<tr>' +
+                                '<td><img src="ct.png" alt="Alert" height="16" width="16">CT MTBI:</td>' +
+                                '<td>This visit met the MTBI criteria and had a CT ordered.</td>' +
+                                '</tr>';
+                                }
+                        return alert_cells_html;
+
                     }
 
                     return '<div class="container-fluid">' +
@@ -160,7 +171,7 @@
                         '<div class="col-md-5">' +
                             '<h6>Alerts</h6>' +
                                 '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +
-                                readmit_cells() +
+                                alert_cells() +
                                 '</table>' +
                         '</div>' +
                     '</div>'
