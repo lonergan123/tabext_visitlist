@@ -86,38 +86,7 @@
                         {data: "DIAGNOSIS_DESCRIPTION"}
                     ],
                     order: [[3, "desc"]],
-                    pageLength: 15,
-                    buttons: [
-                         {
-                            text: 'Show All Visits',
-                            action: function (e, dt, node, config) {
-                                worksheet.clearFilterAsync("READMIT_VISIT")
-                                .then(refreshData(worksheet)
-                                .then(function(finaldata){
-                                    table.clear();
-                                    table.rows.add(finaldata);
-                                    table.draw();
-                                }))
-                            }
-                        },
-                        {
-                            text: 'Readmissions',
-                            action: function (e, dt, node, config) {
-                                worksheet.applyFilterAsync("READMIT_VISIT", ["True"], "replace", 0)
-                                    .then(refreshData(worksheet)
-                                        .then(function(finaldata){
-                                            table.clear();
-                                            table.rows.add(finaldata);
-                                            table.order([3, 'asc']).draw()
-                                        }))
-                            }
-                        },
-                        {
-                            text: 'More buttons can be added ...',
-                            action: function (e, dt, node, config) {
-                                alert("Not yet active.");
-                            }
-                        }]
+                    pageLength: 15
                 });
 
                 function format(d) {
