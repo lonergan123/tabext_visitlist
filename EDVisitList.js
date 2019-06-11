@@ -70,14 +70,13 @@
                         {data: "DISP_GROUP"},
                         {
                             render: function (data, type, row, meta) {
-                                console.log(row);
                                 var icon_html = '';
-                                if (READMIT_VISIT == 'True') {
+                                if (row.READMIT_VISIT == 'True') {
                                     icon_html = icon_html + '<img src="readmit.png" alt="Alert" height="16" width="16">';
-                                } else if (CT_MTBI_ALERT == 'True' || CT_PE_ALERT == 'True') {
+                                } else if (row.CT_MTBI_ALERT == 'True' || row.CT_PE_ALERT == 'True') {
                                     icon_html = icon_html + '<img src="ct.png" alt="Alert" height="16" width="16">';
                                 }
-                                else if (PIA_TO_DISCHARGE_ALERT == 'True' || PIA_TO_CONSULT_ALERT == 'True') {
+                                else if (row.PIA_TO_DISCHARGE_ALERT == 'True' || row.PIA_TO_CONSULT_ALERT == 'True') {
                                     icon_html = icon_html + '<img src="timewarning.png" alt="Alert" height="16" width="16">';
                                 }
                                 return icon_html;
