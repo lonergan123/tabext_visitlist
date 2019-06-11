@@ -62,7 +62,9 @@
                             orderable: false,
                             width: "75px"
                         },
-                        {data: "PATIENT_NAME"},
+                        {   data: "PATIENT_NAME",
+                            width: "75px"
+                        },
                         {data: "PHYSICIAN_ASSESSMENT_DT"},
                         {data: "CTAS"},
                         {data: "DISP_GROUP"},
@@ -78,7 +80,7 @@
                         },
                         {data: "DIAGNOSIS_DESCRIPTION"}
                     ],
-                    order: [[2, "desc"]],
+                    order: [[3, "desc"]],
                     pageLength: 15,
                     buttons: [
                          {
