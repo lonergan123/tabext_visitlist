@@ -113,12 +113,6 @@
                             }
                         },
                         {
-                            text: 'Renal Colic Visits',
-                            action: function (e, dt, node, config) {
-                                alert("Not yet active.");
-                            }
-                        },
-                        {
                             text: 'More buttons can be added ...',
                             action: function (e, dt, node, config) {
                                 alert("Not yet active.");
