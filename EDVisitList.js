@@ -48,7 +48,6 @@
                 }
 
                 const table = $('#datatable').DataTable({
-                    dom: 'Bfrtip', //shows where to display each element on page
                     data: finaldata,
                     columns: [
                         {
