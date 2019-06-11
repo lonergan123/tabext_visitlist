@@ -134,36 +134,36 @@
                         if (d.READMIT_VISIT == 'True') {
                             alert_cells_html = alert_cells_html +
                                 '<tr>' +
-                                '<td><img src="readmit.png" alt="Alert" height="16" width="16">Readmit Details:</td>' +
-                                '<td>'+d.READMIT_DAYS+' days after discharge.</td>' +
+                                '<td><img src="readmit.png" alt="Alert" height="16" width="16"></td>' +
+                                '<td>This visit was readmitted ' +d.READMIT_DAYS+' days after discharge.</td>' +
                                 '</tr>';
                                 }
                         if (d.CT_MTBI_ALERT == 'True') {
                                 alert_cells_html = alert_cells_html +
                                 '<tr>' +
-                                '<td><img src="ct.png" alt="Alert" height="16" width="16">CT MTBI:</td>' +
+                                '<td><img src="ct.png" alt="Alert" height="16" width="16"></td>' +
                                 '<td>This visit met the MTBI criteria and had a CT ordered.</td>' +
                                 '</tr>';
                                 }
                         if (d.CT_PE_ALERT == 'True') {
                                 alert_cells_html = alert_cells_html +
                                 '<tr>' +
-                                '<td><img src="ct.png" alt="Alert" height="16" width="16">CT PE:</td>' +
-                                '<td>This visit met the PE criteria AND had a CT ordered.</td>' +
+                                '<td><img src="ct.png" alt="Alert" height="16" width="16"></td>' +
+                                '<td>This visit met the PE criteria and had a CT ordered.</td>' +
                                 '</tr>';
                                 }
                         if (d.PIA_TO_CONSULT_ALERT == 'True') {
                                 alert_cells_html = alert_cells_html +
                                 '<tr>' +
-                                '<td><img src="ct.png" alt="Alert" height="16" width="16">PIA to Consult:</td>' +
-                                '<td>This patient had a PIA to consult time that was greater than the 90th percentile (with the same site and q 6 month period).</td>' +
+                                '<td><img src="ct.png" alt="Alert" height="16" width="16"></td>' +
+                                '<td>This patient had a PIA to consult time that was greater than the 90th percentile (within the same site and q 6 month period).</td>' +
                                 '</tr>';
                                 }
                         if (d.PIA_TO_DISCHARGE_ALERT == 'True') {
                                 alert_cells_html = alert_cells_html +
                                 '<tr>' +
-                                '<td><img src="ct.png" alt="Alert" height="16" width="16">PIA to Consult:</td>' +
-                                '<td>This patient had a PIA to discharge time that was greater than the 90th percentile (with the same site and q 6 month period).</td>' +
+                                '<td><img src="ct.png" alt="Alert" height="16" width="16"></td>' +
+                                '<td>This patient had a PIA to discharge time that was greater than the 90th percentile (within the same site and q 6 month period).</td>' +
                                 '</tr>';
                                 }
                         return alert_cells_html;
