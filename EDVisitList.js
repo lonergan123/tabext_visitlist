@@ -69,6 +69,7 @@
                         {data: "CTAS"},
                         {data: "DISP_GROUP"},
                         {
+                            data: finaldata
                             render: function (data, type, row, meta) {
                                 console.log(data);
                                 if (data != 'Null') {
