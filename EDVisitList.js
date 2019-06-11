@@ -74,10 +74,10 @@
                                 if (row.READMIT_VISIT == 'True') {
                                     icon_html = icon_html + '<img src="readmit.png" alt="Alert" height="16" width="16">';
                                 } else if (row.CT_MTBI_ALERT == 'True' || row.CT_PE_ALERT == 'True') {
-                                    icon_html = icon_html + '<img src="ct.png" alt="Alert" height="16" width="16">';
+                                    icon_html = icon_html + '<img src="ct.png" alt="CT" height="16" width="16">';
                                 }
                                 else if (row.PIA_TO_DISCHARGE_ALERT == 'True' || row.PIA_TO_CONSULT_ALERT == 'True') {
-                                    icon_html = icon_html + '<img src="timewarning.png" alt="Alert" height="16" width="16">';
+                                    icon_html = icon_html + '<img src="timewarning.png" alt="PIA_90P" height="16" width="16">';
                                 }
                                 return icon_html;
                             }
