@@ -63,7 +63,7 @@
                             width: "75px"
                         },
                         {   data: "PATIENT_NAME",
-                            width: "75px"
+                            width: "150px"
                         },
                         {data: "PHYSICIAN_ASSESSMENT_DT"},
                         {data: "CTAS"},
