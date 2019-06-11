@@ -62,6 +62,7 @@
                             orderable: false,
                             width: "75px"
                         },
+                        {data: "PATIENT_NAME"},
                         {data: "PHYSICIAN_ASSESSMENT_DT"},
                         {data: "CTAS"},
                         {data: "DISP_GROUP"},
@@ -145,7 +146,7 @@
                                 '<td>' + d.ARRIVAL_MODE + '</td>' +
                                 '</tr>' +
                                 '<tr>' +
-                                '<td>Abstracted ICD10 Diagnosis:</td>' +
+                                '<td>ICD10 Dx:</td>' +
                                 '<td>' + d.DXCODE1_NV + ' (' + d.DX_DESC + ')</td>' +
                                 '</tr>' +
                                 '</table>' +
