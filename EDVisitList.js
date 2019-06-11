@@ -118,14 +118,14 @@
                         if (d.PIA_TO_CONSULT_ALERT == 'True') {
                                 alert_cells_html = alert_cells_html +
                                 '<tr>' +
-                                '<td><img src="ct.png" alt="Alert" height="16" width="16"></td>' +
+                                '<td><img src="timewarning.png" alt="Alert" height="16" width="16"></td>' +
                                 '<td>This patient had a PIA to consult time that was greater than the 90th percentile (within the same site and q 6 month period).</td>' +
                                 '</tr>';
                                 }
                         if (d.PIA_TO_DISCHARGE_ALERT == 'True') {
                                 alert_cells_html = alert_cells_html +
                                 '<tr>' +
-                                '<td><img src="ct.png" alt="Alert" height="16" width="16"></td>' +
+                                '<td><img src="timewarning.png" alt="Alert" height="16" width="16"></td>' +
                                 '<td>This patient had a PIA to discharge time that was greater than the 90th percentile (within the same site and q 6 month period).</td>' +
                                 '</tr>';
                                 }
