@@ -130,14 +130,14 @@
                                 alert_cells_html = alert_cells_html +
                                 '<tr>' +
                                 '<td><img src="timewarning.png" alt="Alert" height="16" width="16"></td>' +
-                                '<td>This patient had a PIA to consult time that was greater than the 90th percentile (within the same site and q 6 month period).</td>' +
+                                '<td>This patient had a PIA to consult time of' + d.PIA_TO_CONSULT_MINUTES + ' minutes.  This is greater than the 90th percentile of ' + d.PIA_TO_CONSULT_90P + ' minutes (for this site / 6 month period).</td>' +
                                 '</tr>';
                                 }
                         if (d.PIA_TO_DISCHARGE_ALERT == 'True') {
                                 alert_cells_html = alert_cells_html +
                                 '<tr>' +
                                 '<td><img src="timewarning.png" alt="Alert" height="16" width="16"></td>' +
-                                '<td>This patient had a PIA to discharge time that was greater than the 90th percentile (within the same site and q 6 month period).</td>' +
+                                '<td>This patient had a PIA to discharge time of' + d.PIA_TO_DISCHARGE_MINUTES + ' minutes.  This is greater than the 90th percentile of ' + d.PIA_TO_DISCHARGE_90P + ' minutes (for this site / 6 month period).</td>' +
                                 '</tr>';
                                 }
                         return alert_cells_html;
