@@ -65,9 +65,19 @@
                         {   data: "PATIENT_NAME",
                             width: "150px"
                         },
-                        {data: "PHYSICIAN_ASSESSMENT_DT"},
-                        {data: "CTAS"},
-                        {data: "DISP_GROUP"},
+                        {
+                            data: "PHYSICIAN_ASSESSMENT_DT",
+                            width: "150px"
+                        },
+                        {
+                            data: "CTAS",
+                            width: "50px"
+
+                        },
+                        {
+                            data: "DISP_GROUP",
+                            width: "75px"
+                        },
                         {
                             render: function (data, type, row, meta) {
                                 var icon_html = '';
@@ -81,7 +91,8 @@
                                     icon_html = icon_html + '<img src="timewarning.png" alt="PIA_90P" height="16" width="16">';
                                 }
                                 return icon_html;
-                            }
+                            },
+                            width: "50px"
                         },
                         {data: "DIAGNOSIS_DESCRIPTION"}
                     ],
