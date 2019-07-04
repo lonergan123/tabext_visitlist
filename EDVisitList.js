@@ -6,8 +6,8 @@
         tableau.extensions.initializeAsync().then(function () {
             const worksheet = tableau.extensions.dashboardContent.dashboard.worksheets.find(w => w.name === "Visit List");
 
-            function refreshData(w) {
-                let data = w.getUnderlyingDataAsync({includeAllColumns: true}).then(function (underlying) {
+            function getSelected(w) {
+                let data = w.getSelectedMarksAsync().then(function (underlying) {
                     let columns = underlying.columns;
                     let data = underlying.data;
                     //convert to field:values convention
