@@ -5,7 +5,7 @@
     $(document).ready(function() {
         tableau.extensions.initializeAsync().then(function () {
             const worksheet = tableau.extensions.dashboardContent.dashboard.worksheets.find(w => w.name === "Visit List");
-
+            console.log(worksheet);
             function getSelected(w) {
                 let data = w.getSelectedMarksAsync().then(function (underlying) {
                     let columns = underlying.columns;
