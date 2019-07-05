@@ -62,6 +62,7 @@
                         {
                             className: "details-control",
                             orderable: false,
+                            target: 0,
                             data: null,
                             defaultContent: ""
                         },
