@@ -52,24 +52,17 @@
                     dom: 'frtip', //shows where to display each element on page
                     data: finaldata,
                     //Added to allow clicking anywhere in row to open details
-                    responsive: {
-                        details: {
-                            type: 'column',
-                            target: 'tr'
-                        }
-                    },
+
                     columns: [
                         {
                             className: "details-control",
                             orderable: false,
-                            targets: 0,
                             data: null,
                             defaultContent: ""
                         },
                         {
                             data: "PTN_CHART",
                             orderable: false,
-                            targets: 0,
                             width: "75px"
                         },
                         {   data: "PATIENT_NAME",
