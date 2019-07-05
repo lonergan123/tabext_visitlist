@@ -62,13 +62,14 @@
                         {
                             className: "details-control",
                             orderable: false,
-                            target: 0,
+                            targets: 0,
                             data: null,
                             defaultContent: ""
                         },
                         {
                             data: "PTN_CHART",
                             orderable: false,
+                            targets: 0,
                             width: "75px"
                         },
                         {   data: "PATIENT_NAME",
