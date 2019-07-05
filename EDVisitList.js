@@ -51,6 +51,13 @@
                 const table = $('#datatable').DataTable({
                     dom: 'frtip', //shows where to display each element on page
                     data: finaldata,
+                    //Added to allow clicking anywhere in row to open details
+                    responsive: {
+                        details: {
+                            type: 'column',
+                            target: 'tr'
+                        }
+                    },
                     columns: [
                         {
                             className: "details-control",
