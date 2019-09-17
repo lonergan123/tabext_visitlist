@@ -4,7 +4,7 @@
 (function () {
     $(document).ready(function() {
         tableau.extensions.initializeAsync().then(function () {
-            const worksheet = tableau.extensions.dashboardContent.dashboard.worksheets.find(w => w.name === "Visit List");
+            var worksheet = tableau.extensions.dashboardContent.dashboard.worksheets.find(w => w.name === "Visit List");
 
 
             function refreshData(w) {
